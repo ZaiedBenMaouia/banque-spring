@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service    //pour que spring puisse instatcier la classe au demarrage
 @Transactional
-public class BanqueMetierImpl implements IBanqueMetier {
+public class  BanqueMetierImpl implements IBanqueMetier {
 
 	
 	@Autowired
@@ -57,7 +57,7 @@ public class BanqueMetierImpl implements IBanqueMetier {
 		compteRepository.save(cpte);
 		
 	}
-
+     
 	public void virement(String codeCpte1, String codeCpte2, long montant) {
 		 
 		if(codeCpte1.equals(codeCpte2)) throw new RuntimeException("Impossible virement sur le meme compte");
